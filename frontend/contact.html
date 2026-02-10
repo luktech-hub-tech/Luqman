@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | LUKTECH</title>
+<style>
+body{font-family:'Segoe UI',sans-serif;background:#0f172a;color:white;padding:50px;}
+h1{color:#22c55e;text-align:center;margin-bottom:40px;}
+form{max-width:500px;margin:auto;display:flex;flex-direction:column;}
+input,textarea{margin:10px 0;padding:10px;border-radius:5px;border:none;}
+button{background:#22c55e;color:black;padding:10px;font-weight:bold;border-radius:5px;cursor:pointer;}
+a{color:#22c55e;text-decoration:none;text-align:center;display:block;margin-top:30px;}
+</style>
+</head>
+<body>
+<h1>Contact Us</h1>
+
+<form id="contactForm">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+<textarea name="message" placeholder="Service Request" required></textarea>
+<button type="submit">Submit</button>
+</form>
+
+<a href="index.html">← Back to Home</a>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async e=>{
+e.preventDefault();
+alert("Form submitted! WhatsApp chat also available.");
+window.open("https://wa.me/256784008515","_blank");
+});
+</script>
+
+</body>
+</html>
